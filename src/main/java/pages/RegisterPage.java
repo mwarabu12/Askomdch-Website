@@ -32,13 +32,4 @@ public class RegisterPage {
         return new DashboardPage(driver);
     }
 
-
-
-//    public void registerNewUser(String username, String email, String password) {
-//        driver.findElement(RegisterUserName).sendKeys(username);
-//        driver.findElement(RegisterEmail).sendKeys(email);
-//        driver.findElement(RegisterPassword).sendKeys(password);
-//        driver.findElement(RegisterButton).click();
-//    }
-
 }
