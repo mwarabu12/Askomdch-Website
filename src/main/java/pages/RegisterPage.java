@@ -3,7 +3,7 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class AccountPage {
+public class RegisterPage {
 
     private WebDriver driver;
     private By RegisterUserName = By.id("reg_username");
@@ -11,7 +11,7 @@ public class AccountPage {
     private By RegisterPassword = By.id("reg_password");
     private By RegisterButton = By.xpath("//*[@id=\"customer_login\"]/div[2]/form/p[4]/button");
 
-    public AccountPage (WebDriver driver) {
+    public RegisterPage(WebDriver driver) {
         this.driver = driver;
     }
 
@@ -31,8 +31,6 @@ public class AccountPage {
         driver.findElement(RegisterButton).click();
         return new DashboardPage(driver);
     }
-
-
 
 
 
