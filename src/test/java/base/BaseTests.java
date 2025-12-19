@@ -25,11 +25,11 @@ public class BaseTests {
         homePage = new HomePage(driver);
     }
 
-    @AfterClass
-    public void tearDown() {
-    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
-        if (driver != null) {
-            driver.quit();
-        }
-    }
+//    @AfterClass
+//    public void tearDown() {
+//    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
+//        if (driver != null) {
+//            driver.quit();
+//        }
+//    }
 }

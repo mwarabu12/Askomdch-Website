@@ -14,7 +14,7 @@ public class StorePage {
     private WebDriverWait wait;
     private Actions actions;
 
-    private By searchField = By.cssSelector("input[type='search']");
+    private By searchField = By.id("woocommerce-product-search-field-0");
     private By searchButton = By.cssSelector("button[type='submit']");
     private By firstProduct = By.cssSelector(".product");
     private By addToCartButton = By.cssSelector(".product .add_to_cart_button");

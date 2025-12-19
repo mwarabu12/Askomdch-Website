@@ -28,5 +28,9 @@ public class StoreTests extends BaseTests {
 
         HoverPage hoverPage = new HoverPage(driver);
         hoverPage.hoverOverCartIcon();
+
     }
 }
+
+
+

@@ -9,7 +9,7 @@ public class RegisterPage {
     private By RegisterUserName = By.id("reg_username");
     private By RegisterEmail = By.id("reg_email");
     private By RegisterPassword = By.id("reg_password");
-    private By RegisterButton = By.xpath("//*[@id=\"customer_login\"]/div[2]/form/p[4]/button");
+    private By RegisterButton = By.cssSelector("button.woocommerce-form-register__submit[name=\"register\"]");
 
     public RegisterPage(WebDriver driver) {
         this.driver = driver;
