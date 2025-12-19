@@ -1,24 +1,36 @@
-package search;
+package store;
 
 import base.BaseTests;
 import org.testng.annotations.Test;
-import pages.SearchPage;
+import pages.HoverPage;
 import pages.StorePage;
 
 import static org.testng.Assert.assertTrue;
 
-public class SearchTestss extends BaseTests {
+public class StoreTests extends BaseTests {
+
+    /*===================HERE, I'M GOING TO TEST SEARCH, ADD TO CART, AND HOVER OVER CART ICON===================*/
 
     @Test
-    public void testSearch() {
+    public void testSearchHoverAndAddToCart() {
 
-        // Navigate to store page
         driver.get("https://askomdch.com/store");
 
         StorePage storePage = new StorePage(driver);
 
-        SearchPage searchPage = storePage.searchForProduct("Blue");
+        storePage.searchForProduct("Bracelet");
+        assertTrue(storePage.isAnyProductDisplayed(),"No products displayed after search");
 
-        assertTrue(searchPage.isProductDisplayed(),"Search results are not displayed");
+        //storePage.hoverOverFirstProduct();
+
+        storePage.clickAddToCart();
+        assertTrue(storePage.isAddToCartMessageDisplayed(),"Product was not added to cart");
+
+        HoverPage hoverPage = new HoverPage(driver);
+        hoverPage.hoverOverCartIcon();
+
     }
 }
+
+
+

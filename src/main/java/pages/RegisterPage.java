@@ -3,15 +3,15 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class AccountPage {
+public class RegisterPage {
 
     private WebDriver driver;
     private By RegisterUserName = By.id("reg_username");
     private By RegisterEmail = By.id("reg_email");
     private By RegisterPassword = By.id("reg_password");
-    private By RegisterButton = By.xpath("//*[@id=\"customer_login\"]/div[2]/form/p[4]/button");
+    private By RegisterButton = By.cssSelector("button.woocommerce-form-register__submit[name=\"register\"]");
 
-    public AccountPage (WebDriver driver) {
+    public RegisterPage(WebDriver driver) {
         this.driver = driver;
     }
 
@@ -31,16 +31,5 @@ public class AccountPage {
         driver.findElement(RegisterButton).click();
         return new DashboardPage(driver);
     }
-
-
-
-
-
-//    public void registerNewUser(String username, String email, String password) {
-//        driver.findElement(RegisterUserName).sendKeys(username);
-//        driver.findElement(RegisterEmail).sendKeys(email);
-//        driver.findElement(RegisterPassword).sendKeys(password);
-//        driver.findElement(RegisterButton).click();
-//    }
 
 }
